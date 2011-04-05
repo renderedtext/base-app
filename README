@@ -1,0 +1,21 @@
+Gems in use:
+
+* "Ruby on Rails 3.0.5":https://github.com/rails/rails
+* "PostgreSQL":http://rubygems.org/gems/pg
+
+* "Devise":https://github.com/plataformatec/devise
+* "jQuery":https://github.com/rails/jquery-ujs
+* "Kaminari":https://github.com/amatsuda/kaminari
+* "CarrierWave":https://github.com/jnicklas/carrierwave
+
+* "Rspec":https://github.com/dchelimsky/rspec
+* "Cucumber":https://github.com/aslakhellesoy/cucumber
+* "Capybara":https://github.com/jnicklas/capybara
+* "Database Cleaner":https://github.com/bmabey/database_cleaner
+* "Ruby Debug":https://github.com/mark-moseley/ruby-debug
+* "Factory Girl":https://github.com/thoughtbot/factory_girl
+* "Mongrel":https://github.com/fauna/mongrel
+* "Awesome Print":https://github.com/michaeldv/awesome_print
+
+* "Email Spec":https://github.com/bmabey/email-spec
+* "Shoulda":https://github.com/thoughtbot/shoulda

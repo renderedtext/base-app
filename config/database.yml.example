@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  database: base-app_development
+  username: vladimir
+  password:
+  encoding: utf8
+  pool: 5
+
+test:
+  adapter: postgresql
+  database: base-app_test
+  username: vladimir
+  password:
+  encoding: utf8
+  pool: 5
