@@ -6,10 +6,13 @@ development:
   encoding: utf8
   pool: 5
 
-test:
+test: &test
   adapter: postgresql
   database: base-app_test
   username: vladimir
   password:
   encoding: utf8
   pool: 5
+
+cucumber:
+  <<: *test
