@@ -1,0 +1,22 @@
+<h1>Users</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>email</th>
+      <th>Signed up</th>
+      <th>Edit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td><%= user.id %></td>
+      <td><%= link_to(user.email, admin_user_path(user)) %></td>
+      <td><%= user.created_at %></td>
+      <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
