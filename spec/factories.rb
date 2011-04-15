@@ -3,3 +3,7 @@ Factory.define :user do |u|
   u.password "password"
   u.password_confirmation "password"
 end
+
+Factory.define :role do |r|
+  r.name "admin"
+end
