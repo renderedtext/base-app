@@ -14,7 +14,7 @@ Feature: Authenticating users
     Then I should see "You have signed up successfully."
 
   Scenario: Signing in & Signing out
-    Given I have a user account
+    Given I am registered
     And I am on the homepage
     When I follow "Sign in"
     And I fill in "Email" with "john@doe.com"
