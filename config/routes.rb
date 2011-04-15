@@ -4,6 +4,8 @@ BaseApp::Application.routes.draw do
 
   get "pages/index"
 
+  match "/admin" => "admin/base#index", :as => "admin"
+
   root :to => "pages#index"
 
 end
