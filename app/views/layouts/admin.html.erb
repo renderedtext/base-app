@@ -1,1 +1,6 @@
+<div class="helpNav">
+  <a href="/">← Homepage </a>
+</div>
+
 <%= render "layouts/admin/main_nav" if current_user.admin? %>
+<%= yield %>
