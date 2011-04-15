@@ -9,4 +9,20 @@ class User < ActiveRecord::Base
 
   has_and_belongs_to_many :roles
 
+  def role?(role)
+    return !!self.roles.find_by_name(role.to_s)
+  end
+
+  def make_admin
+    self.roles << Role.admin
+  end
+
+  def revoke_admin
+    self.roles.delete(Role.admin)
+  end
+
+  def admin?
+    role?(:admin)
+  end
+
 end
