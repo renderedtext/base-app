@@ -8,7 +8,7 @@ BaseApp::Application.routes.draw do
 
   namespace "admin" do
 
-    resources :users, :only => [:index, :show, :edit]
+    resources :users
 
   end
 

@@ -10,6 +10,7 @@
       <th><%= sortable "last_sign_in_at", "Last signed in" %></th>
       <th><%= sortable "last_sign_in_ip", "Last sign in IP" %></th>
       <th>Edit</th>
+      <th>Destroy</th>
     </tr>
   </thead>
   <tbody>
@@ -22,6 +23,7 @@
       <td><%= user.last_sign_in_at %></td>
       <td><%= user.last_sign_in_ip %></td>
       <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
+      <td><%= link_to 'Destroy', admin_user_path(user), :confirm => 'Are you sure?', :method => :delete %></td>
     </tr>
     <% end %>
   </tbody>

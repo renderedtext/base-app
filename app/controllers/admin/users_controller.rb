@@ -2,6 +2,8 @@ class Admin::UsersController < Admin::BaseController
 
   helper_method :sort_column, :sort_direction
 
+  before_filter :find_user, :only => [:edit, :update, :show, :destroy]
+
   def index
     @users = User.order(sort_column + " " + sort_direction)
   end
@@ -10,6 +12,25 @@ class Admin::UsersController < Admin::BaseController
   end
 
   def edit
+  end
+
+  def update
+    if @user.update_attributes(params[:user])
+      redirect_to admin_users_path, :notice => "User successfully updated."
+    else
+      render :edit
+    end
+  end
+
+  def destroy
+    @user.destroy
+    redirect_to admin_users_path, :notice => "User deleted."
+  end
+
+  protected
+
+  def find_user
+    @user = User.find(params[:id])
   end
 
   private
