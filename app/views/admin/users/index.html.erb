@@ -6,6 +6,9 @@
       <th><%= sortable "id", %></th>
       <th><%= sortable "email", %></th>
       <th><%= sortable "created_at", "Signed up" %></th>
+      <th><%= sortable "sign_in_count", "Times signed in" %></th>
+      <th><%= sortable "last_sign_in_at", "Last signed in" %></th>
+      <th><%= sortable "last_sign_in_ip", "Last sign in IP" %></th>
       <th>Edit</th>
     </tr>
   </thead>
@@ -15,6 +18,9 @@
       <td><%= user.id %></td>
       <td><%= link_to(user.email, admin_user_path(user)) %></td>
       <td><%= user.created_at %></td>
+      <td><%= user.sign_in_count %></td>
+      <td><%= user.last_sign_in_at %></td>
+      <td><%= user.last_sign_in_ip %></td>
       <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
     </tr>
     <% end %>
