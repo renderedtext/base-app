@@ -4,6 +4,7 @@ gem 'rails', '3.0.5'
 gem 'pg', :require => 'pg'
 
 gem 'devise'
+gem "oa-oauth", :require => "omniauth/oauth"
 gem 'kaminari'
 gem 'carrierwave'
 gem 'jquery-rails', '>= 0.2.6'
