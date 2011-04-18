@@ -6,21 +6,21 @@
   <dd><%= @user.sign_in_count %></dd>
 
   <dt>Current sign in</dt>
-  <dd><%= @user.current_sign_in_at %></dd>
+  <dd><%= l( @user.current_sign_in_at, :format => :long_date ) %></dd>
 
   <dt>Current sign in IP</dt>
   <dd><%= @user.current_sign_in_ip %></dd>
 
   <dt>Last sign in at</dt>
-  <dd><%= @user.last_sign_in_at %></dd>
+  <dd><%= l( @user.last_sign_in_at, :format => :long_date ) %></dd>
 
   <dt>Last sign in IP</dt>
   <dd><%= @user.last_sign_in_ip %></dd>
 
   <dt>Created at</dt>
-  <dd><%= @user.created_at %></dd>
+  <dd><%= l( @user.created_at, :format => :long_date ) %></dd>
 
   <dt>Updated at</dt>
-  <dd><%= @user.updated_at %></dd>
+  <dd><%= l( @user.updated_at, :format => :long_date ) %></dd>
 
 </dl>
