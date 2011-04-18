@@ -1,11 +1,11 @@
 <h1>Users</h1>
 
-<table>
+<table class="sortable">
   <thead>
     <tr>
-      <th>id</th>
-      <th>email</th>
-      <th>Signed up</th>
+      <th><%= sortable "id", %></th>
+      <th><%= sortable "email", %></th>
+      <th><%= sortable "created_at", "Signed up" %></th>
       <th>Edit</th>
     </tr>
   </thead>
