@@ -8,12 +8,22 @@
 </head>
 <body>
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 
-  <%= render "layouts/application/header" %>
+  <div id="container">
 
-<%= yield %>
+    <%= render "layouts/application/header" %>
+
+    <% if notice %>
+      <p id="flash_notice" class="notice"><%= notice %></p>
+    <% end %>
+
+    <% if alert %>
+      <p id="flash_alert" class="alert"><%= alert %></p>
+    <% end %>
+
+    <%= yield %>
+
+  </div>
 
 </body>
 </html>
