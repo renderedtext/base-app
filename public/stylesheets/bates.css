@@ -74,6 +74,21 @@ a {
   margin: 0;
 }
 
+table{ width: 100%; border-collapse: collapse; margin: 1.5em 0; }
+
+th, td{ padding: 7px; line-height: 1.15; border-bottom: 1px solid #dfdfdf; }
+
+th{ font-size: 10px; letter-spacing: 1px; text-transform: uppercase; color: #999; text-align: left; background: #f4f4f4; }
+
+td{ padding: 14px 7px; }
+
+th.highlight,
+td.highlight{ background: #ffffbf; font-weight: bold; }
+
+tfoot td{ background: #e2d1e9; font-weight: bold; }
+
+td input{ text-align: center; width: 100%; }
+
 .sortable th .current {
   padding-right: 12px;
   background-repeat: no-repeat;
