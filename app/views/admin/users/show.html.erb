@@ -1,2 +1,26 @@
-<h1>Admin::Users#show</h1>
-<p>Find me in app/views/admin/users/show.html.erb</p>
+<dl>
+  <dt>Email</dt>
+  <dd><%= @user.email %></dd>
+
+  <dt>Sign in count</dt>
+  <dd><%= @user.sign_in_count %></dd>
+
+  <dt>Current sign in</dt>
+  <dd><%= @user.current_sign_in_at %></dd>
+
+  <dt>Current sign in IP</dt>
+  <dd><%= @user.current_sign_in_ip %></dd>
+
+  <dt>Last sign in at</dt>
+  <dd><%= @user.last_sign_in_at %></dd>
+
+  <dt>Last sign in IP</dt>
+  <dd><%= @user.last_sign_in_ip %></dd>
+
+  <dt>Created at</dt>
+  <dd><%= @user.created_at %></dd>
+
+  <dt>Updated at</dt>
+  <dd><%= @user.updated_at %></dd>
+
+</dl>
