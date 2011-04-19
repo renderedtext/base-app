@@ -15,16 +15,16 @@
   </thead>
   <tbody>
     <% @users.each do |user| %>
-    <tr>
-      <td><%= user.id %></td>
-      <td><%= link_to(user.email, admin_user_path(user)) %></td>
-      <td><%= l( user.created_at, :format => :short_date ) %></td>
-      <td><%= user.sign_in_count %></td>
-      <td><%= l( user.last_sign_in_at, :format => :long_date ) %></td>
-      <td><%= user.last_sign_in_ip %></td>
-      <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
-      <td><%= link_to 'Destroy', admin_user_path(user), :confirm => 'Are you sure?', :method => :delete %></td>
-    </tr>
+      <tr class="user">
+        <td><%= user.id %></td>
+        <td><%= link_to(user.email, admin_user_path(user)) %></td>
+        <td><%= l( user.created_at, :format => :short_date ) %></td>
+        <td><%= user.sign_in_count %></td>
+        <td><%= l( user.last_sign_in_at, :format => :long_date ) %></td>
+        <td><%= user.last_sign_in_ip %></td>
+        <td><%= link_to 'Edit', edit_admin_user_path(user) %></td>
+        <td><%= link_to 'Destroy', admin_user_path(user), :confirm => 'Are you sure?', :method => :delete %></td>
+      </tr>
     <% end %>
   </tbody>
 </table>
