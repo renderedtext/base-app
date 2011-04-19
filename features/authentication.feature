@@ -30,3 +30,12 @@ Feature: Authenticating users
     Given I am on the homepage
     And I follow "Sign in with Facebook"
     Then I should see "Successfully authorized from Facebook account."
+
+  Scenario: User forgot password
+    Given I am registered
+    And I am on the homepage
+    And I follow "Sign in"
+    And I follow "Forgot your password?"
+    When I fill in "Email" with "john@doe.com"
+    And I press "Send me reset password instructions"
+    Then "john@doe.com" should receive an email
