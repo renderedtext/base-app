@@ -5,12 +5,6 @@
   <dt>Sign in count</dt>
   <dd><%= @user.sign_in_count %></dd>
 
-  <dt>Current sign in</dt>
-  <dd><%= l( @user.current_sign_in_at, :format => :long_date ) %></dd>
-
-  <dt>Current sign in IP</dt>
-  <dd><%= @user.current_sign_in_ip %></dd>
-
   <dt>Last sign in at</dt>
   <dd><%= l( @user.last_sign_in_at, :format => :long_date ) %></dd>
 
