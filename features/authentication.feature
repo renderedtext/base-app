@@ -24,3 +24,9 @@ Feature: Authenticating users
     Given I am on the homepage
     When I follow "Sign out"
     Then I should see "Signed out successfully."
+
+@omniauth_test
+  Scenario: Sign in thru Facebook
+    Given I am on the homepage
+    And I follow "Sign in with Facebook"
+    Then I should see "Successfully authorized from Facebook account."
