@@ -7,7 +7,7 @@ class Admin::UsersController < Admin::BaseController
   def index
     @search = User.search(params[:search])
     search_relation = @search.relation
-    @users = search_relation.order(sort_column + " " + sort_direction)
+    @users = search_relation.order(sort_column + " " + sort_direction).page params[:page]
   end
 
   def show

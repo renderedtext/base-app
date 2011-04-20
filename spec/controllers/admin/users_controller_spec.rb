@@ -13,7 +13,7 @@ describe Admin::UsersController do
   describe "GET 'index'" do
 
     it "assigns all users as @users" do
-      User.stub_chain(:search, :relation, :order).and_return([user])
+      User.stub_chain(:search, :relation, :order, :page).and_return([user])
 
       get :index
       assigns[:users].should eql([user])
