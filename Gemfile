@@ -8,6 +8,7 @@ gem "oa-oauth", :require => "omniauth/oauth"
 gem 'kaminari'
 gem 'carrierwave'
 gem 'jquery-rails', '>= 0.2.6'
+gem 'meta_search'
 
 group :test, :development do
   gem 'rspec-rails', "~> 2.4"

@@ -1,11 +1,13 @@
 class Admin::UsersController < Admin::BaseController
 
-  helper_method :sort_column, :sort_direction
+  helper_method :sort_column, :sort_direction, :search_params
 
   before_filter :find_user, :only => [:edit, :update, :show, :destroy]
 
   def index
-    @users = User.order(sort_column + " " + sort_direction)
+    @search = User.search(params[:search])
+    search_relation = @search.relation
+    @users = search_relation.order(sort_column + " " + sort_direction)
   end
 
   def show
@@ -41,6 +43,10 @@ class Admin::UsersController < Admin::BaseController
 
   def sort_direction
     %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
+  end
+
+  def search_params
+    { :search => params[:search] }
   end
 
 end

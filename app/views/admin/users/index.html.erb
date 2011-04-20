@@ -1,5 +1,11 @@
 <h1>Users</h1>
 
+<%= form_for @search, :url => admin_users_path, :html => { :method => :get } do |f| %>
+  <%= f.label :email_contains, "Search" %>
+  <%= f.text_field :email_contains %>
+  <%= f.submit %>
+<% end %>
+
 <table class="sortable">
   <thead>
     <tr>
