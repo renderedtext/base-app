@@ -95,11 +95,11 @@ td input{ text-align: center; width: 100%; }
   background-position: right center;
 }
 .sortable th .asc {
-  background-image: url(/images/up_arrow.gif);
+  background-image: url(/assets/up_arrow.gif);
 }
 
 .sortable th .desc {
-  background-image: url(/images/down_arrow.gif);
+  background-image: url(/assets/down_arrow.gif);
 }
 
 dl {
