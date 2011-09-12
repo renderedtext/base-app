@@ -1,7 +1,7 @@
 source "http://rubygems.org"
 
-gem "rails", "3.1.0.rc4"
-gem "sprockets", "= 2.0.0.beta.10"
+gem "rails", "3.1.0"
+#gem "sprockets"
 gem "pg", :require => "pg"
 
 gem 'json'
@@ -12,11 +12,11 @@ gem "devise"
 gem "oa-oauth", :require => "omniauth/oauth"
 gem "kaminari"
 gem "carrierwave"
-gem "jquery-rails", "~> 1.0.9"
-gem "meta_search", "~> 1.1.0.pre"
+gem "jquery-rails"
+gem "meta_search"
 
 group :test, :development do
-  gem "rspec-rails", "~> 2.4"
+  gem "rspec-rails"
   gem "email_spec"
   gem "shoulda"
   gem "cucumber-rails"
