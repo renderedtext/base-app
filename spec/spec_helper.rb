@@ -1,37 +1,46 @@
-# This file is copied to spec/ when you run 'rails generate rspec:install'
-ENV["RAILS_ENV"] ||= 'test'
-require File.expand_path("../../config/environment", __FILE__)
-require 'rspec/rails'
-require 'email_spec'
+require 'rubygems'
+require 'spork'
 
-# Requires supporting ruby files with custom matchers and macros, etc,
-# in spec/support/ and its subdirectories.
-Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+Spork.prefork do
 
-RSpec.configure do |config|
-  config.mock_with :rspec
-  config.include(EmailSpec::Helpers)
-  config.include(EmailSpec::Matchers)
+  require "rails/application"
+  # Prevent Devise from loading the User model super early with it's route hacks for Rails 3.1
+  # see also: https://github.com/timcharper/spork/wiki/Spork.trap_method-Jujutsu
+  Spork.trap_method(Rails::Application, :reload_routes!)
+  Spork.trap_method(Rails::Application::RoutesReloader, :reload!)
 
-  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
-  #config.fixture_path = "#{::Rails.root}/spec/fixtures"
+  ENV["RAILS_ENV"] ||= 'test'
+  require File.expand_path("../../config/environment", __FILE__)
+  require 'rspec/rails'
+  require 'email_spec'
 
-  # If you're not using ActiveRecord, or you'd prefer not to run each of your
-  # examples within a transaction, remove the following line or assign false
-  # instead of true.
-  #config.use_transactional_fixtures = true
+  # Requires supporting ruby files with custom matchers and macros, etc,
+  # in spec/support/ and its subdirectories.
+  Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
-  config.before(:suite) do
-    DatabaseCleaner.strategy = :transaction
-    DatabaseCleaner.clean_with(:truncation)
+  RSpec.configure do |config|
+    config.mock_with :rspec
+    config.include(EmailSpec::Helpers)
+    config.include(EmailSpec::Matchers)
+
+    config.before(:suite) do
+      DatabaseCleaner.strategy = :transaction
+      DatabaseCleaner.clean_with(:truncation)
+    end
+
+    config.before(:each) do
+      DatabaseCleaner.start
+    end
+
+    config.after(:each) do
+      DatabaseCleaner.clean
+    end
+
   end
 
-  config.before(:each) do
-    DatabaseCleaner.start
-  end
+end
 
-  config.after(:each) do
-    DatabaseCleaner.clean
-  end
-
+Spork.each_run do
+  load "#{Rails.root}/config/routes.rb"
+  Dir["#{Rails.root}/app/**/*.rb"].each { |f| load f }
 end

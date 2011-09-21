@@ -190,6 +190,7 @@ GEM
       json_pure
       rubyzip
     shoulda (2.11.3)
+    spork (0.9.0.rc9)
     sprockets (2.0.0)
       hike (~> 1.2)
       rack (~> 1.0)
@@ -237,6 +238,7 @@ DEPENDENCIES
   rspec-rails
   ruby-debug19
   shoulda
+  spork (~> 0.9.0.rc)
   therubyracer
   therubyracer-heroku
   uglifier

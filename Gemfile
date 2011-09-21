@@ -28,6 +28,7 @@ group :test, :development do
   gem "chronic"
   gem "awesome_print"
   gem "therubyracer"
+  gem "spork", "~> 0.9.0.rc"
 end
 
 group :production do
