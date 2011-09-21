@@ -31,6 +31,11 @@ GEM
     activesupport (3.1.0)
       multi_json (~> 1.0)
     addressable (2.2.6)
+    admin_view (0.1.0)
+      kaminari
+      meta_search
+      rails (>= 3.0)
+      rspec-rails (>= 2.4.0)
     archive-tar-minitar (0.5.2)
     arel (2.2.1)
     awesome_print (0.4.0)
@@ -217,6 +222,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  admin_view (~> 0.1.0)
   awesome_print
   capybara
   carrierwave

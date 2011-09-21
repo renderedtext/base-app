@@ -29,6 +29,7 @@ group :test, :development do
   gem "awesome_print"
   gem "therubyracer"
   gem "spork", "~> 0.9.0.rc"
+  gem "admin_view", "~> 0.1.0"
 end
 
 group :production do
