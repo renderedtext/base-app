@@ -1,15 +1,17 @@
 source "http://rubygems.org"
 
-gem "rails", "3.1.0"
-#gem "sprockets"
+gem "rails", "3.2.1"
+gem "sass-rails", "~> 3.2.3"
+gem "coffee-rails", "3.2.1"
+gem 'uglifier', ">= 1.0.3"
+
 gem "pg", :require => "pg"
 
 gem 'json'
-gem 'coffee-script'
-gem 'uglifier'
 
 gem "devise"
-gem "oa-oauth", :require => "omniauth/oauth"
+gem "omniauth-facebook"
+
 gem "kaminari"
 gem "carrierwave"
 gem "jquery-rails"
@@ -17,7 +19,7 @@ gem "meta_search"
 
 group :test, :development do
   gem "rspec-rails"
-  gem "spork", "~> 0.9.0.rc"
+  gem "spork", "~> 1.0.0rc1"
   gem "ruby-debug19"
   gem "awesome_print"
 end
@@ -25,8 +27,7 @@ end
 group :development do
   gem "mongrel", ">= 1.2.0.pre2"
   gem "chronic"
-  gem "therubyracer"
-  gem "admin_view", "~> 0.1.0"
+  gem "admin_view"
 end
 
 group :test do
@@ -40,5 +41,4 @@ group :test do
 end
 
 group :production do
-  gem "therubyracer-heroku"
 end
