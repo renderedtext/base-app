@@ -8,8 +8,9 @@ gem 'json'
 gem 'coffee-script'
 gem 'uglifier'
 
-gem "devise"
-gem "oa-oauth", :require => "omniauth/oauth"
+gem "devise", "1.5"
+gem "omniauth-facebook"
+
 gem "kaminari"
 gem "carrierwave"
 gem "jquery-rails"
