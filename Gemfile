@@ -33,6 +33,7 @@ end
 
 group :test do
   gem "cucumber-rails", :require => false
+  gem "selenium-webdriver", "~> 2.18.0"
 end
 
 group :production do
