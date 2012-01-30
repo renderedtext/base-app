@@ -19,7 +19,6 @@ group :test, :development do
   gem "rspec-rails"
   gem "email_spec"
   gem "shoulda"
-  gem "cucumber-rails"
   gem "capybara"
   gem "factory_girl_rails"
   gem "database_cleaner"
@@ -30,6 +29,10 @@ group :test, :development do
   gem "therubyracer"
   gem "spork", "~> 0.9.0.rc"
   gem "admin_view", "~> 0.1.0"
+end
+
+group :test do
+  gem "cucumber-rails", :require => false
 end
 
 group :production do
