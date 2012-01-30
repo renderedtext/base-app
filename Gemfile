@@ -8,7 +8,7 @@ gem 'json'
 gem 'coffee-script'
 gem 'uglifier'
 
-gem "devise", "1.5"
+gem "devise"
 gem "omniauth-facebook"
 
 gem "kaminari"
