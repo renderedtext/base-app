@@ -1,12 +1,13 @@
 source "http://rubygems.org"
 
-gem "rails", "3.1.0"
-#gem "sprockets"
+gem "rails", "3.2.1"
+gem "sass-rails", "~> 3.2.3"
+gem "coffee-rails", "3.2.1"
+gem 'uglifier', ">= 1.0.3"
+
 gem "pg", :require => "pg"
 
 gem 'json'
-gem 'coffee-script'
-gem 'uglifier'
 
 gem "devise"
 gem "omniauth-facebook"
