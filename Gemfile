@@ -25,7 +25,6 @@ end
 group :development do
   gem "mongrel", ">= 1.2.0.pre2"
   gem "chronic"
-  gem "therubyracer"
   gem "admin_view", "~> 0.1.0"
 end
 
@@ -40,5 +39,4 @@ group :test do
 end
 
 group :production do
-  gem "therubyracer-heroku"
 end
