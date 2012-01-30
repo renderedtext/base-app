@@ -17,7 +17,7 @@ gem "meta_search"
 
 group :test, :development do
   gem "rspec-rails"
-  gem "spork", "~> 0.9.0.rc"
+  gem "spork", "~> 1.0.0rc1"
   gem "ruby-debug19"
   gem "awesome_print"
 end
