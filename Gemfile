@@ -25,7 +25,7 @@ end
 group :development do
   gem "mongrel", ">= 1.2.0.pre2"
   gem "chronic"
-  gem "admin_view", "~> 0.1.0"
+  gem "admin_view"
 end
 
 group :test do
