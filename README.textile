@@ -1,6 +1,8 @@
 h1. base-app
 
-A base Rails application. Features a user and admin system with Facebook login.
+A base Rails application. Features a user and admin system with Facebook login. It is instadeployable to Heroku.
+
+Here's one "deployed to heroku":http://rtbaseapp.herokuapp.com/. *Note*: Environment variables for Facebook login are not set so logging in that way will not work.
 
 h2. Gemfile
 
