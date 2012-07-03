@@ -18,6 +18,7 @@ gem "kaminari"
 gem "carrierwave"
 gem "jquery-rails"
 gem "meta_search"
+gem "dynamic_form"
 
 group :test, :development do
   gem "rspec-rails"
