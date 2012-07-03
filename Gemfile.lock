@@ -94,7 +94,6 @@ GEM
       multipart-post (~> 1.1)
       rack (~> 1.1)
     ffi (1.0.11)
-    gem_plugin (0.2.3)
     gherkin (2.7.6)
       json (>= 1.4.6)
     hashie (1.2.0)
@@ -129,9 +128,6 @@ GEM
       meta_search
       polyamorous (~> 0.5.0)
     mime-types (1.17.2)
-    mongrel (1.2.0.pre2)
-      daemons (~> 1.0.10)
-      gem_plugin (~> 0.2.3)
     multi_json (1.0.4)
     multipart-post (1.1.4)
     nokogiri (1.5.0)
@@ -258,7 +254,6 @@ DEPENDENCIES
   json
   kaminari
   meta_search
-  mongrel (>= 1.2.0.pre2)
   omniauth-facebook
   pg
   rails (= 3.2.1)
