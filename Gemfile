@@ -1,24 +1,17 @@
 source "http://rubygems.org"
 
 gem "rails"
-gem "sass-rails"
-gem "coffee-rails"
-gem 'uglifier'
-
-gem 'heroku'
 
 gem "pg", :require => "pg"
 
-gem 'json'
-
+gem "jquery-rails"
 gem "devise"
 gem "omniauth-facebook"
-
 gem "kaminari"
 gem "carrierwave"
-gem "jquery-rails"
 gem "meta_search"
 gem "dynamic_form"
+gem 'heroku'
 
 group :test, :development do
   gem "rspec-rails"
