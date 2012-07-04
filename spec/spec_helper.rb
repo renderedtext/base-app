@@ -44,10 +44,6 @@ Spork.prefork do
 
   end
 
-  # Needed until https://github.com/sporkrb/spork/issues/188 issue is fixed.
-  p "Done setting up. Closing DB connections in test"
-  ActiveRecord::Base.remove_connection
-
 end
 
 Spork.each_run do
