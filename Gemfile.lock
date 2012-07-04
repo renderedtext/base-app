@@ -50,7 +50,7 @@ GEM
       activesupport (>= 3.2.0)
     childprocess (0.3.3)
       ffi (~> 1.0.6)
-    chronic (0.6.6)
+    chronic (0.6.7)
     columnize (0.3.6)
     cucumber (1.2.1)
       builder (>= 2.1.2)
