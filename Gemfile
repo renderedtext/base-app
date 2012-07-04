@@ -15,7 +15,8 @@ gem 'heroku'
 
 group :test, :development do
   gem "rspec-rails"
-  gem "spork", "~> 1.0.0rc1"
+  gem "spork-rails"
+  gem "ruby-debug19"
   gem "awesome_print"
 end
 
