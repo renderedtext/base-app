@@ -21,7 +21,6 @@ group :test, :development do
 end
 
 group :development do
-  gem "thin"
   gem "chronic"
   gem "admin_view"
   gem "ruby-debug19"
@@ -37,6 +36,6 @@ group :test do
   gem "email_spec"
 end
 
-group :production do
+group :production, :development do
   gem "thin"
 end
