@@ -31,7 +31,7 @@ group :test do
   gem "factory_girl_rails"
   gem "cucumber-rails", :require => false
   gem "database_cleaner"
-  gem "selenium-webdriver", "~> 2.18.0"
+  gem "selenium-webdriver"
   gem "capybara"
   gem "shoulda"
   gem "email_spec"
