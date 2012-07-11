@@ -1,5 +1,5 @@
 language: ruby
-bundler_args: --without production
+bundler_args: --without production development
 before_script:
   - psql -c 'create database base-app_test;' -U postgres
   - psql -c 'create database base-app_development;' -U postgres

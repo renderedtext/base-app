@@ -22,7 +22,6 @@ gem "meta_search"
 group :test, :development do
   gem "rspec-rails"
   gem "spork", "~> 1.0.0rc1"
-  gem "ruby-debug19"
   gem "awesome_print"
 end
 
@@ -30,6 +29,7 @@ group :development do
   gem "mongrel", ">= 1.2.0.pre2"
   gem "chronic"
   gem "admin_view"
+  gem "ruby-debug19"
 end
 
 group :test do
