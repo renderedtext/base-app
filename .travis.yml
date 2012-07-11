@@ -1,0 +1,27 @@
+language: ruby
+bundler_args: --without production
+before_script:
+  - psql -c 'create database base-app_test;' -U postgres
+  - psql -c 'create database base-app_development;' -U postgres
+  - "export DISPLAY=:99.0"
+  - "sh -e /etc/init.d/xvfb start"
+  - "mv config/database.yml.example config/database.yml"
+script:
+  - bundle exec rake db:migrate db:test:prepare
+  - bundle exec rake spec
+  - bundle exec rake cucumber
+rvm:
+  - 1.8.7
+  - rbx-19mode
+  - jruby-19mode
+  - jruby-head
+  - 1.9.2
+  - 1.9.3
+gemfile:
+  - Gemfile
+notifications:
+  recipients:
+    - devs@renderedtext.com
+branches:
+  only:
+    - master

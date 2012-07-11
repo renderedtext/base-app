@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   database: base-app_development
-  username: vladimir
+  username: postgres
   password:
   encoding: utf8
   pool: 5
@@ -9,7 +9,7 @@ development:
 test: &test
   adapter: postgresql
   database: base-app_test
-  username: vladimir
+  username: postgres
   password:
   encoding: utf8
   pool: 5
