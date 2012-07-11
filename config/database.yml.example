@@ -1,6 +1,6 @@
 development:
   adapter: postgresql
-  database: base-app_development
+  database: baseapp_development
   username: postgres
   password:
   encoding: utf8
@@ -8,7 +8,7 @@ development:
 
 test: &test
   adapter: postgresql
-  database: base-app_test
+  database: baseapp_test
   username: postgres
   password:
   encoding: utf8
