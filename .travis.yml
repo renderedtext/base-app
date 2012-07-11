@@ -1,8 +1,8 @@
 language: ruby
 bundler_args: --without production development
 before_script:
-  - psql -c 'create database base-app_test;' -U postgres
-  - psql -c 'create database base-app_development;' -U postgres
+  - psql -c 'create database baseapp_test;' -U postgres
+  - psql -c 'create database baseapp_development;' -U postgres
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - "mv config/database.yml.example config/database.yml"
