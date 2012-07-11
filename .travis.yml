@@ -7,7 +7,8 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - "mv config/database.yml.example config/database.yml"
 script:
-  - bundle exec rake db:migrate db:test:prepare
+  - bundle exec rake db:migrate
+  - bundle exec rake db:test:prepare
   - bundle exec rake spec
   - bundle exec rake cucumber
 rvm:
