@@ -14,10 +14,10 @@ describe User do
 
   it { should have_and_belong_to_many(:roles) }
 
-  let(:user) { Factory(:user) }
+  let(:user) { create(:user) }
 
-  let(:admin_role) { Factory(:role, :name => "admin") }
-  let(:customer_role) { Factory(:role, :name => "customer") }
+  let(:admin_role) { create(:role, :name => "admin") }
+  let(:customer_role) { create(:role, :name => "customer") }
 
   describe ".role?" do
 

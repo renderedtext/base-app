@@ -16,7 +16,7 @@ Before("@omniauth_test") do
       "provider" => "facebook",
       "user_info" => { "nickname" => "Johny" },
       "credentials" => { "token" => "exampletoken" },
-      "extra" => { "user_hash" => FACEBOOK_INFO }
+      "info" => FACEBOOK_INFO
   }
 end
 
