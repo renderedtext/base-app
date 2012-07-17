@@ -11,7 +11,9 @@ gem "kaminari"
 gem "carrierwave"
 gem "meta_search"
 gem "dynamic_form"
-gem 'heroku'
+gem "heroku"
+gem "coffee-rails"
+gem "twitter-bootstrap-rails"
 
 group :test, :development do
   gem "rspec-rails"

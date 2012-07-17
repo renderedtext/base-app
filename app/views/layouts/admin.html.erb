@@ -1,33 +1,37 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>Base Application - Admin Dashboard</title>
-  <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
+<html lang="en">
 
-  <div id="container">
+  <head>
 
-    <div class="helpNav">
-      <a href="/">← Homepage </a>
+    <title>Base Application - Admin Dashboard</title>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+
+    <%= csrf_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= yield :head %>
+
+  </head>
+
+  <body>
+
+    <%= render "layouts/admin/main_nav" %>
+
+    <div class="container">
+
+    <%= render "layouts/application/flash_messages" %>
+
+      <%= yield %>
+
     </div>
 
-    <%= render "layouts/admin/main_nav" if current_user.admin? %>
+  </body>
 
-    <% if notice %>
-      <p id="flash_notice" class="notice"><%= notice %></p>
-    <% end %>
-
-    <% if alert %>
-      <p id="flash_alert" class="alert"><%= alert %></p>
-    <% end %>
-
-
-    <%= yield %>
-  </div>
-
-</body>
 </html>
-

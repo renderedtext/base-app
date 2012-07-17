@@ -1,29 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Base Application</title>
-  <%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tag %>
-</head>
-<body>
 
+  <head>
 
-  <div id="container">
+    <title>Base Application</title>
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+
+    <%= csrf_meta_tag %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <%= yield :head %>
+
+  </head>
+
+  <body>
 
     <%= render "layouts/application/header" %>
 
-    <% if notice %>
-      <p id="flash_notice" class="notice"><%= notice %></p>
-    <% end %>
+    <div class="container">
 
-    <% if alert %>
-      <p id="flash_alert" class="alert"><%= alert %></p>
-    <% end %>
+      <%= render "layouts/application/flash_messages" %>
 
-    <%= yield %>
+      <%= yield %>
 
-  </div>
+    </div>
 
-</body>
+  </body>
+
 </html>

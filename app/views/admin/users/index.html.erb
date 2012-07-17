@@ -1,12 +1,11 @@
 <h1>Users</h1>
 
-<%= form_for @search, :url => admin_users_path, :html => { :method => :get } do |f| %>
-  <%= f.label :email_contains, "Search" %>
-  <%= f.text_field :email_contains %>
-  <%= f.submit %>
+<%= form_for @search, :url => admin_users_path, :html => { :method => :get, :class => "well form-search" } do |f| %>
+  <%= f.text_field :email_contains, :class => "input-medium search-query" %>
+  <%= f.submit "Search", :class => "btn" %>
 <% end %>
 
-<table class="sortable">
+<table class="sortable table table-striped table-bordered table-condensed">
   <thead>
     <tr>
       <th><%= sortable "id" %></th>
@@ -22,7 +21,7 @@
   <tbody>
     <% @users.each do |user| %>
       <tr class="user">
-        <td><%= user.id %></td>
+        <td><%= link_to(user.id, admin_user_path(user)) %></td>
         <td><%= link_to(user.email, admin_user_path(user)) %></td>
         <td><%= l( user.created_at, :format => :short_date ) %></td>
         <td><%= user.sign_in_count %></td>
