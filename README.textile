@@ -18,12 +18,12 @@ For testing and development:
 * "Rspec":https://github.com/dchelimsky/rspec
 * "Cucumber":https://github.com/aslakhellesoy/cucumber with "Capybara":https://github.com/jnicklas/capybara
 * "Database Cleaner":https://github.com/bmabey/database_cleaner
-* "Ruby Debug":https://github.com/mark-moseley/ruby-debug
+* "Debugger":https://github.com/cldwalker/debugger
 * "Factory Girl":https://github.com/thoughtbot/factory_girl_rails
 * "Awesome Print":https://github.com/michaeldv/awesome_print
 * "Email Spec":https://github.com/bmabey/email-spec
 * "Shoulda":https://github.com/thoughtbot/shoulda
-* "Mongrel":https://github.com/fauna/mongrel
+* "Thin":https://github.com/macournoyer/thin
 
 h2. Setup
 
@@ -34,4 +34,4 @@ h2. Setup
 
 h2. License
 
-base-app is Copyright © 2011 Rendered Text. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+base-app is Copyright © 2021 Rendered Text. It is free software, and may be redistributed under the terms specified in the LICENSE file.
