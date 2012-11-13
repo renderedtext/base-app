@@ -18,7 +18,7 @@ gem "twitter-bootstrap-rails"
 group :test, :development do
   gem "rspec-rails"
   gem "spork-rails"
-  gem "ruby-debug19"
+  gem "debugger"
   gem "awesome_print"
 end
 
