@@ -25,7 +25,7 @@ end
 group :development do
   gem "chronic"
   gem "admin_view"
-  gem "ruby-debug19"
+  gem "debugger"
 end
 
 group :test do
