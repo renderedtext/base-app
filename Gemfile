@@ -13,7 +13,12 @@ gem "meta_search"
 gem "dynamic_form"
 gem "heroku"
 gem "coffee-rails"
+gem "less-rails"
 gem "twitter-bootstrap-rails"
+
+group :assets do
+  gem "therubyracer", :platform => :ruby
+end
 
 group :test, :development do
   gem "rspec-rails"
