@@ -34,4 +34,4 @@ h2. Setup
 
 h2. License
 
-base-app is Copyright © 2021 Rendered Text. It is free software, and may be redistributed under the terms specified in the LICENSE file.
+base-app is Copyright © 2012 Rendered Text. It is free software, and may be redistributed under the terms specified in the LICENSE file.
