@@ -4,6 +4,8 @@ A base Rails application. Features a user and admin system with Facebook login. 
 
 Here's one "deployed to heroku":http://rtbaseapp.herokuapp.com/. *Note*: Environment variables for Facebook login are not set so logging in that way will not work.
 
+<img src="https://semaphoreapp.com/api/v1/projects/c9f380031d388e17ef54f0007b31952cc182fd31/4204/badge.png">
+
 h2. Gemfile
 
 * "pg":http://rubygems.org/gems/pg for PostgreSQL
