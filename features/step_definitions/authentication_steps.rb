@@ -17,3 +17,8 @@ Given /^I am logged in as admin$/ do
     And I press "Sign in"
   }
 end
+
+When /^I fill in password fields with "(.*?)"$/ do |value|
+  find("#user_password").set(value)
+  find("#user_password_confirmation").set(value)
+end
