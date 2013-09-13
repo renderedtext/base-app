@@ -2,7 +2,7 @@ source "http://rubygems.org"
 
 gem "rails"
 
-gem "pg", :require => "pg"
+gem 'mysql2'
 
 gem "jquery-rails"
 gem "devise"
