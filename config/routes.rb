@@ -4,7 +4,7 @@ BaseApp::Application.routes.draw do
 
   get "pages/index"
 
-  match "/admin" => "admin/base#index", :as => "admin"
+  get "/admin" => "admin/base#index", :as => "admin"
 
   namespace "admin" do
 

@@ -1,20 +1,28 @@
-source "http://rubygems.org"
+source "https://rubygems.org"
 
-gem "rails"
+gem "rails", "4.0.2"
 
+# Use PostgreSQL as the database for Active Record
 gem "pg", :require => "pg"
 
+# Compressor of JavaScript assets
+gem "uglifier", ">= 1.3.0"
+
+# Use CoffeeScript for .js.coffee assets and views
+gem "coffee-rails", "~> 4.0.0"
+
+# Use jQuery as the JavaScript library
 gem "jquery-rails"
-gem "devise"
+
+# User authentication
+gem "devise", "3.2.2"
+
 gem "omniauth-facebook"
 gem "kaminari"
 gem "carrierwave"
-gem "meta_search"
+#gem "meta_search"
 gem "dynamic_form"
-gem "heroku"
-gem "coffee-rails"
-gem "less-rails"
-gem "twitter-bootstrap-rails"
+#gem "twitter-bootstrap-rails"
 
 group :assets do
   gem "therubyracer", :platform => :ruby
@@ -22,14 +30,13 @@ end
 
 group :test, :development do
   gem "rspec-rails"
-  gem "spork-rails"
   gem "debugger"
   gem "awesome_print"
 end
 
 group :development do
   gem "chronic"
-  gem "admin_view"
+  #gem "admin_view"
 end
 
 group :test do
