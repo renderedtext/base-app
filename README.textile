@@ -4,7 +4,7 @@ A base Rails application. Features a user and admin system with Facebook login. 
 
 Here's one "deployed to heroku":http://rtbaseapp.herokuapp.com/. *Note*: Environment variables for Facebook login are not set so logging in that way will not work.
 
-<img src="https://semaphoreapp.com/api/v1/projects/c9f380031d388e17ef54f0007b31952cc182fd31/4204/badge.png">
+<img src="https://semaphoreapp.com/api/v1/projects/73c4b979-0a40-49db-b10e-571d41e10d9a/133529/badge.png">
 
 h2. Gemfile
 
@@ -29,7 +29,7 @@ For testing and development:
 
 h2. Setup
 
-* Make sure you have rvm and Ruby 1.9.2.
+* Make sure you have Ruby 2.1.0.
 * Install dependencies from Gemfile: @bundle install --path vendor/bundle@.
 * Create your @config/database.yml@, create the database and run the migrations.
 * For Facebook login to work, export environment variables @FACEBOOK_APP_ID@ and @FACEBOOK_APP_SECRET@.
