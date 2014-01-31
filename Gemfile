@@ -30,7 +30,6 @@ end
 group :development do
   gem "chronic"
   gem "admin_view"
-  gem "debugger"
 end
 
 group :test do
