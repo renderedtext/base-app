@@ -34,7 +34,7 @@ GEM
       meta_search (>= 1.0)
       rails (>= 3.0)
     arel (3.0.2)
-    awesome_print (1.1.0)
+    awesome_print (1.2.0)
     bcrypt-ruby (3.0.1)
     builder (3.0.4)
     capybara (2.2.1)
