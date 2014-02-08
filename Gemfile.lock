@@ -37,9 +37,6 @@ GEM
       rack (>= 1.0.0)
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
-    carrierwave (0.7.1)
-      activemodel (>= 3.2.0)
-      activesupport (>= 3.2.0)
     childprocess (0.4.0)
       ffi (~> 1.0, >= 1.0.11)
     chronic (0.10.2)
@@ -224,7 +221,6 @@ PLATFORMS
 DEPENDENCIES
   awesome_print
   capybara
-  carrierwave
   chronic
   coffee-rails (~> 4.0.0)
   cucumber-rails

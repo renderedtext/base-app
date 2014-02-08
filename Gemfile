@@ -19,7 +19,6 @@ gem "devise", "3.2.2"
 
 gem "omniauth-facebook"
 gem "kaminari"
-gem "carrierwave"
 gem "ransack"
 gem "dynamic_form"
 
