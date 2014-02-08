@@ -13,7 +13,6 @@ Here's one [deployed to heroku](http://rtbaseapp.herokuapp.com/). Just note that
 - [Devise](https://github.com/plataformatec/devise) for authenticating users with [OmniAuth](https://github.com/intridea/omniauth) for Facebook login
 - [Ransack](https://github.com/activerecord-hackery/ransack) for searching users
 - [Kaminari](https://github.com/amatsuda/kaminari) for pagination
-- [CarrierWave](https://github.com/jnicklas/carrierwave) for file uploads
 
 For testing and development:
 
