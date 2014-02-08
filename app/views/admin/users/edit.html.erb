@@ -1,14 +1,24 @@
-<h1>Editing user</h1>
+<div class="page-header">
+  <h2>Editing user <%= @user.email %></h2>
+</div>
 
-<%= form_for [:admin, @user], :html => { :class => "well" } do |f| -%>
+<%= form_for [:admin, @user], :html => { :class => "form-horizontal", :role => "form" } do |f| -%>
 
   <%= f.error_messages %>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+  <div class="form-group">
+    <%= f.label :email, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+      <%= f.email_field :email, :type => :email, :class => "form-control", :placeholder => "Enter new email" %>
+    </div>
+  </div>
 
   </br>
 
-  <%= f.submit "Update", :class => "btn" %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <%= f.submit "Update", :class => "btn btn-default" %>
+    </div>
+  </div>
 
 <% end -%>

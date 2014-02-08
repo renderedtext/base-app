@@ -36,5 +36,5 @@ Feature: Authenticating users
     And I follow "Sign in"
     And I follow "Forgot your password?"
     When I fill in "Email" with "john@doe.com"
-    And I press "Send me reset password instructions"
+    And I press "Send me instructions to reset password"
     Then "john@doe.com" should receive an email
