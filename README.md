@@ -2,7 +2,7 @@
 
 A base Rails application. Features user and admin system with Facebook login. It is instadeployable to Heroku.
 
-Here's one [deployed to heroku](http://rtbaseapp.herokuapp.com/). Just note that environment variables for Facebook login are not set so logging in that way will not work.
+Here's one [deployed to heroku](http://rt-baseapp.herokuapp.com/). Just note that environment variables for Facebook login are not set so logging in that way will not work.
 
 <img src="https://semaphoreapp.com/api/v1/projects/73c4b979-0a40-49db-b10e-571d41e10d9a/133529/badge.png">
 
