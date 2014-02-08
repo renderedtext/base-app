@@ -1,21 +1,48 @@
-<dl class="dl-horizontal">
+<div class="page-header">
+  <h2><%= @user.email %></h2>
+</div>
 
-  <dt>Email</dt>
-  <dd><%= @user.email %></dd>
+<table class="table table-bordered">
+  <tr>
+    <td>ID</td>
+    <td><%= @user.id %></td>
+  </tr>
 
-  <dt>Sign in count</dt>
-  <dd><%= @user.sign_in_count %></dd>
+  <tr>
+    <td>Email</td>
+    <td><%= @user.email %></td>
+  </tr>
 
-  <dt>Last sign in at</dt>
-  <dd><%= l( @user.last_sign_in_at, :format => :long_date ) %></dd>
+  <tr>
+  <td>Sign in count</td>
+  <td><%= @user.sign_in_count %></td>
+  </tr>
 
-  <dt>Last sign in IP</dt>
-  <dd><%= @user.last_sign_in_ip %></dd>
+  <tr>
+    <td>Last sign in at</td>
+    <td><%= l( @user.last_sign_in_at, :format => :long ) %></td>
+  </tr>
 
-  <dt>Created at</dt>
-  <dd><%= l( @user.created_at, :format => :long_date ) %></dd>
+  <tr>
+    <td>Last sign in IP</td>
+    <td><%= @user.last_sign_in_ip %></td>
+  </tr>
 
-  <dt>Updated at</dt>
-  <dd><%= l( @user.updated_at, :format => :long_date ) %></dd>
+  <tr>
+    <td>Created at</td>
+    <td><%= l( @user.created_at, :format => :long ) %></td>
+  </tr>
 
-</dl>
+  <tr>
+    <td>Updated at</td>
+    <td><%= l( @user.updated_at, :format => :long ) %></td>
+  </tr>
+
+  <tr>
+    <td>Actions</td>
+    <td>
+      <%= link_to("Edit", edit_admin_user_path(@user), :class => "btn btn-default") %>
+      <%= link_to("Destroy", admin_user_path(@user), :data => { :confirm => 'Are you sure?' }, :method => :delete, :class => "btn btn-danger btn-xs") %>
+    </td>
+  </tr>
+</table>

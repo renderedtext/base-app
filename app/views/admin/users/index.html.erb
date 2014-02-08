@@ -1,14 +1,19 @@
-<h1>Users</h1>
+<div class="page-header">
+  <h1>Users</h1>
+</div>
 
-<%= form_for @search, :url => admin_users_path, :html => { :method => :get, :class => "well form-search" } do |f| %>
-  <%= f.text_field :email_contains, :class => "input-medium search-query" %>
-  <%= f.submit "Search", :class => "btn" %>
+<%= search_form_for @q, :url => admin_users_path, :html => { :method => :get, :class => "well form-inline" } do |f| %>
+  <div class="form-group">
+    <%= f.text_field :email_cont, :type => "search", :class => "form-control", :placeholder => "Search by email" %>
+  </div>
+
+  <%= f.submit "Search", :class => "btn btn-default" %>
 <% end %>
 
 <table class="sortable table table-striped table-bordered table-condensed">
   <thead>
     <tr>
-      <th><%= sortable "id" %></th>
+      <th><%= sortable "id", "ID" %></th>
       <th><%= sortable "email" %></th>
       <th><%= sortable "created_at", "Signed up" %></th>
       <th><%= sortable "sign_in_count", "Times signed in" %></th>

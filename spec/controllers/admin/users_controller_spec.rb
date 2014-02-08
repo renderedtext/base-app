@@ -13,7 +13,7 @@ describe Admin::UsersController do
   describe "GET 'index'" do
 
     it "assigns all users as @users" do
-      User.stub_chain(:search, :relation, :order, :page).and_return([user])
+      User.stub_chain(:search, :result, :order, :page).and_return([user])
 
       get :index
       assigns[:users].should eql([user])
@@ -74,13 +74,13 @@ describe Admin::UsersController do
       end
 
       it "redirects to users list" do
-        post "update", :id => user.id
+        post "update", :id => user.id, :user => { :email => "new@example.com" }
 
         response.should redirect_to(admin_users_path)
       end
 
       it "sets notice on successful update" do
-        post "update", :id => user.id
+        post "update", :id => user.id, :user => { :email => "new@example.com" }
 
         flash[:notice].should_not be_nil
       end
@@ -94,7 +94,7 @@ describe Admin::UsersController do
       end
 
       it "renders 'edit' template" do
-        post "update", :id => user.id
+        post "update", :id => user.id, :user => { :email => "new@example.com" }
 
         response.should render_template("edit")
       end

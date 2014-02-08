@@ -20,9 +20,8 @@ gem "devise", "3.2.2"
 gem "omniauth-facebook"
 gem "kaminari"
 gem "carrierwave"
-#gem "meta_search"
+gem "ransack"
 gem "dynamic_form"
-#gem "twitter-bootstrap-rails"
 
 group :assets do
   gem "therubyracer", :platform => :ruby
