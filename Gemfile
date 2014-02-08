@@ -22,10 +22,6 @@ gem "kaminari"
 gem "ransack"
 gem "dynamic_form"
 
-group :assets do
-  gem "therubyracer", :platform => :ruby
-end
-
 group :test, :development do
   gem "rspec-rails"
   gem "debugger"
