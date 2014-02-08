@@ -52,7 +52,7 @@ describe User do
   describe ".make_admin" do
 
     before do
-      Role.find_or_create_by_name("admin")
+      Role.find_or_create_by(:name => "admin")
       user.make_admin
     end
 
@@ -65,7 +65,7 @@ describe User do
   describe ".revoke_admin" do
 
     before do
-      Role.find_or_create_by_name("admin")
+      Role.find_or_create_by(:name => "admin")
       user.make_admin
       user.revoke_admin
     end
