@@ -1,31 +1,32 @@
-<div class="navbar navbar-fixed-top">
-  <div class="navbar-inner">
-    <div class="container">
-
-      <%= link_to "Base Application", root_path, :class => "brand" %>
-
-      <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+<nav class="navbar navbar-default" role="navigation">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#baseapp-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </a>
+      </button>
 
-      <div class="nav-collapse">
-        <ul class="nav pull-right">
-          <% if user_signed_in? %>
-            <% if current_user.admin? %>
-              <li><%= link_to "Admin", admin_path %></li>
-            <% end %>
-            <li><%= link_to "Sign out", destroy_user_session_path %></li>
-            <li><%= link_to "Settings", edit_user_registration_path %></li>
-          <% else %>
-            <li><%= link_to "Sign up", new_user_registration_path %></li>
-            <li><%= link_to "Sign in", new_user_session_path %></li>
-            <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
-          <% end -%>
-        </ul>
-      </div>
-
+      <%= link_to "Base Application", root_path, :class => "navbar-brand" %>
     </div>
+
+
+    <div class="collapse navbar-collapse" id="baseapp-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <% if user_signed_in? %>
+          <li><%= link_to "Account settings", edit_user_registration_path %></li>
+          <li><%= link_to "Sign out", destroy_user_session_path %></li>
+          <% if current_user.admin? %>
+            <li><%= link_to "Admin", admin_path %></li>
+          <% end %>
+        <% else %>
+          <li><%= link_to "Sign up", new_user_registration_path %></li>
+          <li><%= link_to "Sign in", new_user_session_path %></li>
+          <li><%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %></li>
+        <% end -%>
+      </ul>
+    </div>
+
   </div>
-</div>
+</nav>
