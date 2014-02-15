@@ -1,6 +1,6 @@
 # base-app
 
-A base Rails application. Features user and admin system with Facebook login. It is instadeployable to Heroku.
+A base Rails 4 application. Features user and admin system with Facebook login. It is instadeployable to Heroku.
 
 The view is implemented using [Bootstrap 3](http://getbootstrap.com/).
 
@@ -40,4 +40,4 @@ For testing and development:
 
 ### License
 
-base-app is Copyright © 2011-2014 [Rendered Text](http://renderedtext). It is free software, and may be redistributed under the terms specified in the LICENSE file.
+base-app is Copyright © 2011-2014 [Rendered Text](http://renderedtext.com). It is free software, and may be redistributed under the terms specified in the LICENSE file.
