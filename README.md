@@ -10,11 +10,6 @@ Here's a [live demo](http://rt-baseapp.herokuapp.com/). Just note that environme
 
 ### Gemfile
 
-
-
-
-
-
 - [pg](http://rubygems.org/gems/pg) for PostgreSQL
 - [jQuery](https://github.com/rails/jquery-ujs)
 - [Devise](https://github.com/plataformatec/devise) for authenticating users with [OmniAuth](https://github.com/intridea/omniauth) for Facebook login
