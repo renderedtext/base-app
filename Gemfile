@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "4.0.2"
+gem "rails", "4.0.4"
 
 # Use PostgreSQL as the database for Active Record
 gem "pg", :require => "pg"
@@ -15,7 +15,7 @@ gem "coffee-rails", "~> 4.0.0"
 gem "jquery-rails"
 
 # User authentication
-gem "devise", "3.2.2"
+gem "devise", "3.2.4"
 
 gem "omniauth-facebook"
 gem "kaminari"
