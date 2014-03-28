@@ -6,35 +6,26 @@ Feature: Authenticating users
 
   Scenario: Signing up
     Given I am on the homepage
-    When I follow "Sign up"
-    And I fill in "Email" with "john@doe.com"
-    And I fill in password fields with "password"
-    And I press "Sign up"
-    Then I should see "You have signed up successfully."
+    When I sign up
+    Then I should see a sign up confirmation
+    And I should be logged in
 
   Scenario: Signing in & Signing out
     Given I am registered
     And I am on the homepage
-    When I follow "Sign in"
-    And I fill in "Email" with "john@doe.com"
-    And I fill in "Password" with "password"
-    And I press "Sign in"
-    Then I should see "Signed in successfully."
-    Given I am on the homepage
-    When I follow "Sign out"
-    Then I should see "Signed out successfully."
+    When I sign in
+    Then I should see the sign in confirmation
+    When I sign out
+    Then I should see the sign out confirmation
 
-@omniauth_test
+  @omniauth_test
   Scenario: Sign in thru Facebook
     Given I am on the homepage
-    And I follow "Sign in with Facebook"
-    Then I should see "Successfully authorized from Facebook account."
+    When I sign in with Facebook
+    Then I should see the Facebook sign in confirmation
 
   Scenario: User forgot password
     Given I am registered
     And I am on the homepage
-    And I follow "Sign in"
-    And I follow "Forgot your password?"
-    When I fill in "Email" with "john@doe.com"
-    And I press "Send me instructions to reset password"
-    Then "john@doe.com" should receive an email
+    When I reset my password
+    Then I should receive a password reset email
