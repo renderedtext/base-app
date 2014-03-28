@@ -2,23 +2,59 @@ Given /^I am registered$/ do
   @registered_user = create(:user, :email => "john@doe.com")
 end
 
-Given /^I am admin$/ do
-  @registered_user.make_admin
+When(/^I sign up$/) do
+  click_link "Sign up"
+  fill_in "Email", :with => "john@doe.com"
+  fill_in "Password", :with => "password"
+  fill_in "Password confirmation", :with => "password"
+  click_button "Sign up"
 end
 
-Given /^I am logged in as admin$/ do
+Then(/^I should see a sign up confirmation$/) do
+  page.should have_content("You have signed up successfully.")
+end
+
+Then(/^I should be logged in$/) do
+  page.should have_content("Account settings")
+  page.should have_content("Sign out")
+end
+
+When(/^I sign in$/) do
+  click_link "Sign in"
+  fill_in "Email", :with => "john@doe.com"
+  fill_in "Password", :with => "password"
+  click_button "Sign in"
+end
+
+Then(/^I should see the sign in confirmation$/) do
+  page.should have_content("Signed in successfully.")
+end
+
+When(/^I sign out$/) do
+  click_link "Sign out"
+end
+
+Then(/^I should see the sign out confirmation$/) do
+  page.should have_content("Signed out successfully.")
+end
+
+When(/^I sign in with Facebook$/) do
+  click_link "Sign in with Facebook"
+end
+
+Then(/^I should see the Facebook sign in confirmation$/) do
+  page.should have_content("Successfully authorized from Facebook account.")
+end
+
+When(/^I reset my password$/) do
+  click_link "Sign in"
+  click_link "Forgot your password?"
+  fill_in "Email", :with => "john@doe.com"
+  click_button "Send me instructions to reset password"
+end
+
+Then(/^I should receive a password reset email$/) do
   steps %Q{
-    Given I am registered
-    And I am admin
-    And I am on the homepage
-    When I follow "Sign in"
-    And I fill in "Email" with "john@doe.com"
-    And I fill in "Password" with "password"
-    And I press "Sign in"
+    Then "john@doe.com" should receive an email
   }
-end
-
-When /^I fill in password fields with "(.*?)"$/ do |value|
-  find("#user_password").set(value)
-  find("#user_password_confirmation").set(value)
 end

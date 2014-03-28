@@ -6,37 +6,33 @@ Feature: Admin - user accounts
 
   Scenario: Listing users
     Given I am logged in as admin
-    When I follow "Admin"
-    And I follow "Users"
-    Then I should see "john@doe.com"
+    When I open admin users screen
+    Then I should see myself in admin user list
 
   Scenario: Editing a user
     Given a user with email "mark@example.com" exists
     And a user with email "peter@example.com" exists
-    And a user with email "simon@example.com" exists
     And I am logged in as admin
-    And I am on the homepage
-    When I follow "Admin"
-    And I follow "Users"
+    When I open admin users screen
     And I edit user with "mark@example.com" email
-    Then the "Email" field should contain "mark@example.com"
-    When I fill in "Email" with "mark@newdomain.com"
-    And I press "Update"
-    Then I should see "User successfully updated"
-    And I should see "mark@newdomain.com"
+    And I admin change user "mark@example.com" email to "mark@newdomain.com"
+    Then I should see admin user edit confirmation
+    And I should see user "mark@newdomain.com" in admin users list
 
   Scenario: Searching for a user
     Given a user with email "mark@example.com" exists
     And a user with email "peter@example.com" exists
     And I am logged in as admin
-    And I am on the homepage
-    When I follow "Admin"
-    And I follow "Users"
-    And I fill in "q_email_cont" with "mark"
-    And I press "Search"
-    Then I should see "mark@example.com"
-    But I should not see "peter@example.com"
-    When I fill in "q_email_cont" with "example.com"
-    And I press "Search"
-    Then I should see "mark@example.com"
-    And I should see "peter@example.com"
+    When I open admin users screen
+    And I admin search for user "mark"
+    Then admin user search results should include "mark@example.com"
+    But admin user search results should not include "peter@example.com"
+
+  Scenario: Searching for users by email suffic
+    Given a user with email "mark@example.com" exists
+    And a user with email "peter@example.com" exists
+    And I am logged in as admin
+    When I open admin users screen
+    And I admin search for user "example.com"
+    Then admin user search results should include "mark@example.com"
+    And admin user search results should include "peter@example.com"

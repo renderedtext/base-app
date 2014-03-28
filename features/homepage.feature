@@ -6,4 +6,4 @@ Feature: Viewing application's homepage
 
   Scenario: View application homepage
     Given I am on the homepage
-    Then I should see "Welcome"
+    Then I should see the welcome message
