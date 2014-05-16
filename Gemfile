@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-gem "rails", "4.1.0"
+gem "rails", "4.1.1"
 
 # Use PostgreSQL as the database for Active Record
 gem "pg", :require => "pg"
@@ -30,7 +30,7 @@ end
 
 group :development do
   gem "chronic"
-  #gem "admin_view"
+  gem "admin_view"
 end
 
 group :test do
