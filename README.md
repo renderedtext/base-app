@@ -6,7 +6,7 @@ The view is implemented using [Bootstrap 3](http://getbootstrap.com/).
 
 Here's a [live demo](http://rt-baseapp.herokuapp.com/). Just note that environment variables for Facebook login are not set so logging in that way will not work.
 
-<img src="https://semaphoreapp.com/api/v1/projects/73c4b979-0a40-49db-b10e-571d41e10d9a/133529/badge.png">
+<a href="https://semaphoreapp.com/renderedtext/base-app"><img src="https://semaphoreapp.com/api/v1/projects/73c4b979-0a40-49db-b10e-571d41e10d9a/133529/badge.png"></a>
 
 ### Gemfile
 
