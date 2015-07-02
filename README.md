@@ -40,4 +40,4 @@ For testing and development:
 
 ### License
 
-base-app is Copyright © 2011-2014 [Rendered Text](http://renderedtext.com). It is free software, and may be redistributed under the terms specified in the LICENSE file.
+base-app is Copyright © 2011-2015 [Rendered Text](http://renderedtext.com). It is free software, and may be redistributed under the terms specified in the LICENSE file.
